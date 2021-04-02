@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/LLlogi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.samyotech.petstand.utils.CustomTextViewBold
+                android:id="@+id/CTVBlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:padding="10dp"
+                android:text="Login"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/IVlog"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/gradiant_button4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.samyotech.petstand.utils.CustomTextViewBold
+                android:id="@+id/CTVBsignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:padding="10dp"
+                android:text="Sign Up"
+                android:textColor="@color/gray"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/IVsignup"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/gradiant_button4"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/logisignframe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/LLlogi"
+        android:layout_marginTop="30dp">
+
+    </FrameLayout>
+
+
+</RelativeLayout>

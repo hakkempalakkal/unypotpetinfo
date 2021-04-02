@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.samyotech.petstand">
+
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Push service 运行需要的权限 -->
+    <!-- SDCard中创建与删除文件权限 -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" /> <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Permission to use camera - required -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Camera features - recommended -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <application
+        android:name="com.samyotech.petstand.SysApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="allowBackup">
+        <activity android:name="com.samyotech.petstand.activity.home.BreedInfoHome"></activity>
+        <activity android:name="com.samyotech.petstand.activity.petlist.PetListr" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.samyotech.petstand.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.verion"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDiS0VfjWTuhcYAv2J6yAackTv0SS063E0" />
+        <!--
+            <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+        -->
+        <activity
+            android:name="com.samyotech.petstand.Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.samyotech.petstand.activity.register.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.register.OTPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.BaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.UserProfile.UserProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.utils.MainFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.editPet.EditPet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.SubCategoryList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.petprofile.ProfilePets"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.addpet.AddPetSlides"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.nearbypetlist.FriendPetProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.nearbypetlist.PetProfileNearByUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.duties.AddReminder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.duties.HistoryReminder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.duties.ConfirmReminder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.duties.CreateReminder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.register.LoginSignupactivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.register.ForgotpasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.register.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.duties.EditReminder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.FoodList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.ProductByHomeList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.BrandList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.ShopifyFoodList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.ShopifyFoodDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.chat.ChatNotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.FoodDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.Cart"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.samyotech.petstand.activity.Memories.SpacePhotoActivity" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.ViewOrderDetails"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert" />
+        <activity
+            android:name="com.samyotech.petstand.activity.AddMemories"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.MyOrder.MyOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.MyOrder.vieworder.ViewOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.vat.PlaceDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.ContactActivity"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.filter.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.filter.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.wall.Comment"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.petprofile.RatingPet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.wall.PetVoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.wall.EditPost"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.wall.ViewPost"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.wall.PostWall"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.wall.MyPost"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.Memories.GalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.MyOrder.ShopifyMyOrderDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.PaymentViewActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="6956ee260d8a46359094304995f81a6c154130cd" />
+
+        <activity android:name="com.samyotech.petstand.AppIntro" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.WriteReview"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.multipleimagepicker.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.samyotech.petstand.multipleimagepicker.MultiMyPetImageSelectorActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.samyotech.petstand.activity.Memories.AddMultipleImage"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.samyotech.petstand.activity.tracker.TrackerActivity" /> <!-- [START firebase_service] -->
+        <service android:name="com.samyotech.petstand.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- [END firebase_service] -->
+        <receiver android:name="com.samyotech.petstand.utils.SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.samyotech.petstand.activity.chat.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.chat.OneTwoOneChatDemo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.notification.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.contactmessage.ContactMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.samyotech.petstand.activity.food.OrdershipedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.nearbypetlist.ContactPetListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.utils.ImageZoomActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.event.EventCreate"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.event.ShowMyEventActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.event.MyEventDescriptionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.event.OtherEventDescriptionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.event.ShowJoinedEventUserActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.petprofile.PetViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.petmarket.CommentPetMarket"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.petprofile.UserPetProfileForWallActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.petmarket.ShowPetMarketActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.petmarket.AddPetMarketActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.petprofile.PetFolowersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.utils.imagepager.ImageviewpagerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.fragment.NearBy.ShopActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.fragment.NearBy.SalonActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.fragment.NearBy.TraninerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.fragment.NearBy.HostelActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.fragment.NearBy.VaterinaryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.petmarket.ShowMyPetAdActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.filter.FilterPetMarketActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.samyotech.petstand.activity.petmarket.CatagoryPetMarket"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.schibstedspain.leku.LocationPickerActivity"
+            android:label="@string/leku_title_activity_location_picker"
+            android:parentActivityName="com.samyotech.petstand.activity.UserProfile.UserProfileActivity"
+            android:theme="@style/AppTheme.Map"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/leku_searchable" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.samyotech.petstand.activity.UserProfile.UserProfileActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_pRpz9FLFnbcyXX" /> <!-- rzp_live_A65XrWACGxqepT -->
+        <!-- rzp_test_pRpz9FLFnbcyXX -->
+        <activity android:name="com.samyotech.petstand.activity.food.AddressActivity" />
+    </application>
+
+</manifest>

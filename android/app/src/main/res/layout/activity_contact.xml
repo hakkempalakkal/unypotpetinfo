@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/RRprofile"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/gradiant_bg2">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center">
+
+            <com.samyotech.petstand.utils.CustomTextView
+                android:id="@+id/action_add_appointment_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Back"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <com.samyotech.petstand.utils.CustomTextView
+            android:id="@+id/tvHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Contact"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RRprofile"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_back"
+            android:orientation="horizontal">
+
+
+            <com.samyotech.petstand.utils.CustomEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@android:color/transparent"
+                android:editable="false"
+                android:gravity="center_vertical|left"
+                android:hint="Name"
+                android:paddingLeft="15dp"
+                android:singleLine="true">
+
+            </com.samyotech.petstand.utils.CustomEditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_back"
+            android:orientation="horizontal">
+
+
+            <com.samyotech.petstand.utils.CustomEditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@android:color/transparent"
+                android:editable="false"
+                android:gravity="center_vertical|left"
+                android:hint="Mobile"
+                android:paddingLeft="15dp"
+                android:singleLine="true">
+
+            </com.samyotech.petstand.utils.CustomEditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_back"
+            android:orientation="horizontal">
+
+            <com.samyotech.petstand.utils.CustomEditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="top|left"
+                android:hint="Enter your message"
+                android:maxLength="500"
+                android:maxLines="5"
+                android:minLines="5"
+                android:paddingLeft="15dp"
+                android:paddingTop="8dp" />
+
+        </LinearLayout>
+
+
+        <com.samyotech.petstand.utils.CustomTextView
+            android:id="@+id/tvChar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="end"
+            android:text="Characters 0/500"
+            android:textSize="14sp" />
+
+
+        <com.samyotech.petstand.utils.CustomButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/gradiant_button2"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

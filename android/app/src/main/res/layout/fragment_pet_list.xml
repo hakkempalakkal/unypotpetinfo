@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragment.NearBy.PetListFrag">
+
+    <LinearLayout
+        android:id="@+id/llFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@drawable/edittext_back"
+        android:orientation="horizontal">
+
+
+        <com.samyotech.petstand.utils.CustomEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:drawableRight="@drawable/ic_search_black"
+            android:gravity="center_vertical|left"
+            android:hint="Search by breed &amp; name &amp; pettype.."
+            android:drawablePadding="10dp"
+            android:layout_margin="5dp"
+            android:textSize="14dp"
+            android:singleLine="true">
+
+        </com.samyotech.petstand.utils.CustomEditText>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFriendList"
+        android:layout_below="@+id/llFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"></androidx.recyclerview.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/llIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:src="@drawable/search_ab" />
+
+        <com.samyotech.petstand.utils.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Not Found" />
+    </LinearLayout>
+
+
+</RelativeLayout>

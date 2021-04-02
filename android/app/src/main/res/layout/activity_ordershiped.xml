@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.food.OrdershipedActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/gradiant_bg2">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_white"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <com.samyotech.petstand.utils.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Shipping Details"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="16sp"
+                android:orientation="vertical">
+
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv"
+                    android:text="Name"
+                    android:textColor="@color/text_color_gray" />
+
+                <com.samyotech.petstand.utils.CustomEditText
+                    android:id="@+id/cetName"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvtadd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/iv"
+                    android:background="@android:color/transparent"
+                    android:hint="name"
+                    android:maxLines="4"
+                    android:textColor="@color/inset" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray" />
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_toRightOf="@+id/iv"
+                    android:text="Mobile Number"
+                    android:textColor="@color/text_color_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        app:ccp_countryAutoDetectionPref="SIM_NETWORK_LOCALE"
+                        app:ccp_countryPreference="RO"
+                        app:ccp_defaultNameCode="in"
+                        app:ccp_hintExampleNumber="true"
+                        app:ccp_hintExampleNumberType="MOBILE"
+                        card_view:ccp_textSize="16sp" />
+
+                    <com.samyotech.petstand.utils.CustomEditText
+                        android:id="@+id/cetMobileNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/cvtadd"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toRightOf="@+id/iv"
+                        android:background="@android:color/transparent"
+                        android:hint="Mobile Number"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:textColor="@color/inset" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray" />
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv"
+                    android:text="Email"
+                    android:textColor="@color/text_color_gray" />
+
+                <com.samyotech.petstand.utils.CustomEditText
+                    android:id="@+id/cetEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvtadd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/iv"
+                    android:background="@android:color/transparent"
+                    android:hint="Email"
+                    android:singleLine="true"
+                    android:textColor="@color/inset" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray" />
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv"
+                    android:text="Address"
+                    android:textColor="@color/text_color_gray" />
+
+                <com.samyotech.petstand.utils.CustomEditText
+                    android:id="@+id/cetAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvtadd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/iv"
+                    android:background="@android:color/transparent"
+                    android:hint="Address"
+                    android:maxLines="4"
+                    android:singleLine="true"
+                    android:textColor="@color/inset" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray" />
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+                    android:id="@+id/cvtadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv"
+                    android:text="Landmark(Pick from map)"
+                    android:textColor="@color/text_color_gray"
+                    android:visibility="visible" />
+
+                <com.samyotech.petstand.utils.CustomEditText
+                    android:id="@+id/cetAddressMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvtadd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/iv"
+                    android:background="@android:color/transparent"
+                    android:editable="false"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:hint="Landmark"
+                    android:maxLines="4"
+                    android:textColor="@color/inset"
+                    android:visibility="visible" />
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray" />
+
+
+
+
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv"
+                    android:text="Country"
+                    android:textColor="@color/text_color_gray" />
+
+                <com.samyotech.petstand.utils.CustomEditText
+                    android:id="@+id/cetCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvtadd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/iv"
+                    android:background="@android:color/transparent"
+                    android:hint="Country"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:text="India"
+
+                    android:textColor="@color/inset" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray" />
+
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv"
+                    android:text="City (Only for indore)"
+                    android:textColor="@color/text_color_gray" />
+
+                <com.samyotech.petstand.utils.CustomEditText
+                    android:id="@+id/cetCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvtadd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/iv"
+                    android:background="@android:color/transparent"
+                    android:hint="City"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:text="Indore"
+                    android:textColor="@color/inset" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray" />
+
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv"
+                    android:text="ZipCode"
+                    android:textColor="@color/text_color_gray" />
+
+                <com.samyotech.petstand.utils.CustomEditText
+                    android:id="@+id/cetZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvtadd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@+id/iv"
+                    android:background="@android:color/transparent"
+                    android:hint="Zip Code"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textColor="@color/inset" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray" />
+
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv"
+                    android:text="Payment status"
+                    android:textColor="@color/text_color_gray" />
+
+
+                <RadioGroup
+                    android:id="@+id/RGpayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+
+                        android:id="@+id/RBcaseon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Case On Delivery"
+                        android:visibility="gone" />
+
+
+                    <RadioButton
+                        android:id="@+id/RBonline"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:checked="true"
+                        android:text="Online Payment" />
+
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvOrder"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/llAdd"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradiant_button2"
+                    android:gravity="center">
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save and Continue"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

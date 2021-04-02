@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/selectPetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/dob_icon" />
+
+            <com.samyotech.petstand.utils.CustomTextView
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Date of birth"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <com.samyotech.petstand.utils.CustomTextView
+            android:id="@+id/dob"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:drawableRight="@drawable/ic_calender_green"
+            android:gravity="left|center"
+            android:paddingBottom="7dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:text=""
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="200dip"
+            android:layout_height="1dp"
+            android:layout_below="@+id/action_bar_menus"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="5dip"
+            android:background="@color/material_grey_300"></View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/heart_icon" />
+
+            <com.samyotech.petstand.utils.CustomTextView
+                android:layout_width="200dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="left|center"
+                android:text="Adoption date"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+
+        <com.samyotech.petstand.utils.CustomTextView
+            android:id="@+id/adoption"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:drawableRight="@drawable/ic_calender_green"
+            android:gravity="left|center"
+            android:paddingBottom="7dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:text=""
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="200dip"
+            android:layout_height="1dp"
+            android:layout_below="@+id/action_bar_menus"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="20dp"
+            android:background="@color/material_grey_300"></View>
+    </LinearLayout>
+
+</RelativeLayout>

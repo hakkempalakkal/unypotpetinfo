@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "400378023397",
+    "firebase_url": "https://petstand-259609.firebaseio.com",
+    "project_id": "petstand-259609",
+    "storage_bucket": "petstand-259609.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400378023397:android:4eede84e09d63a99c6730c",
+        "android_client_info": {
+          "package_name": "com.samyotech.petstand"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400378023397-ho8ge5eqkj48sg6f2g15kfqhtssq17cs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.samyotech.petstand",
+            "certificate_hash": "1bec5317ea710851bc8803750ca85fb1e61dd21b"
+          }
+        },
+        {
+          "client_id": "400378023397-26h57b4c28sd7ef6v0qv0jkng1cgisi5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiS0VfjWTuhcYAv2J6yAackTv0SS063E0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400378023397-26h57b4c28sd7ef6v0qv0jkng1cgisi5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

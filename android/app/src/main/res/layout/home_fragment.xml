@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/action_bar_menus"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:background="@drawable/gradiant_bg2"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.samyotech.petstand.utils.CustomTextView
+                                android:id="@+id/tv_add_appointment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="@string/app_name"
+                                android:textColor="@color/white"
+                                android:textSize="18dp" />
+
+                            <com.samyotech.petstand.utils.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Delivery for petlover"
+                                android:textColor="@color/white"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/llCart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight=".2"
+                            android:padding="10dp">
+
+
+                            <ImageView
+                                android:id="@+id/ivCart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_shopping_cart" />
+
+                            <com.samyotech.petstand.utils.CustomTextView
+                                android:id="@+id/tvCardcount"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="35dp"
+                                android:background="@drawable/round_with_whitecolor"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/action_bar_menus"
+                        android:background="@drawable/gradiant_bg2">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/white"
+                            android:focusableInTouchMode="false"
+                            app:cardCornerRadius="5dp">
+
+                            <com.samyotech.petstand.utils.CustomEditText
+                                android:id="@+id/IVsearch"
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:background="@android:color/transparent"
+                                android:clickable="true"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="Search By Product"
+                                android:paddingLeft="10dp">
+
+
+                            </com.samyotech.petstand.utils.CustomEditText>
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+
+                    <com.samyotech.petstand.utils.AutoScrollViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="-30dp"
+                        app:centered="true"
+                        app:fillColor="#ff0099"
+                        app:snap="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginTop="10sp"
+                        android:background="#000000"
+                        android:visibility="gone"></View>
+
+
+                    <com.samyotech.petstand.utils.CustomTextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="35sp"
+                        android:background="@drawable/gradiant_button5"
+                        android:drawableLeft="@drawable/ic_like_home"
+                        android:drawableRight="@drawable/ic_like_home"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5sp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5sp"
+                        android:text="Shop by Pets"
+                        android:textColor="@color/bpDark_gray"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_animal_cat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginTop="20sp"></androidx.recyclerview.widget.RecyclerView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginTop="10sp"
+                        android:background="#ECE5E5"
+                        android:visibility="gone"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:orientation="vertical">
+
+
+                        <com.samyotech.petstand.utils.CustomTextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20sp"
+                            android:background="@drawable/gradiant_button5"
+                            android:drawableLeft="@drawable/ic_like_home"
+                            android:drawableRight="@drawable/ic_like_home"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5sp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5sp"
+                            android:text="Popular Products"
+                            android:textColor="@color/bpDark_gray"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_products"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16sp"
+                            android:layout_marginTop="20sp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+
+                            <LinearLayout
+                                android:id="@+id/llBreadInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp"
+                                android:layout_centerInParent="true"
+                                android:background="#FE8581"
+                                android:gravity="center"
+                                android:orientation="vertical"></LinearLayout>
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivType"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15sp"
+                                android:elevation="10dp"
+                                android:src="@drawable/about_us_back" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_bg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15sp"
+                                android:layout_toRightOf="@+id/ivType"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+
+                                <com.samyotech.petstand.utils.CustomTextViewBold
+                                    android:id="@+id/ctvbType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:maxLines="2"
+                                    android:text="Dog"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <com.samyotech.petstand.utils.CustomTextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:background="@drawable/gradiant_button5"
+                            android:drawableLeft="@drawable/ic_like_home"
+                            android:drawableRight="@drawable/ic_like_home"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5sp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5sp"
+                            android:text="New Arrivals"
+                            android:textColor="@color/bpDark_gray"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_newProducts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16sp"
+                            android:layout_marginTop="20sp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+                        <com.samyotech.petstand.utils.CustomTextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20sp"
+                            android:background="@drawable/gradiant_button5"
+                            android:drawableLeft="@drawable/ic_like_home"
+                            android:drawableRight="@drawable/ic_like_home"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5sp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5sp"
+                            android:text="Near By"
+                            android:textColor="@color/bpDark_gray"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16sp"
+                            android:layout_marginTop="20dp"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/llPetShop"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="5sp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/petshop" />
+
+                                    <com.samyotech.petstand.utils.CustomTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5sp"
+                                        android:text="@string/petshop" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llVeterinarian"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/veterinarian" />
+
+                                    <com.samyotech.petstand.utils.CustomTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5sp"
+                                        android:text="@string/Veterinarian" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llPets_Grooming"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/petsservice" />
+
+                                    <com.samyotech.petstand.utils.CustomTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5sp"
+                                        android:text="Grooming" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llHostels"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/pethostel" />
+
+                                    <com.samyotech.petstand.utils.CustomTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5sp"
+                                        android:text="Hostels" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llTrainers"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/pettrainer" />
+
+                                    <com.samyotech.petstand.utils.CustomTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5sp"
+                                        android:text="Trainers" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </HorizontalScrollView>
+
+
+                        <com.samyotech.petstand.utils.CustomTextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20sp"
+                            android:background="@drawable/gradiant_button5"
+                            android:drawableLeft="@drawable/ic_like_home"
+                            android:drawableRight="@drawable/ic_like_home"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5sp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5sp"
+                            android:text="Top Offers"
+                            android:textColor="@color/bpDark_gray"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_top_offers"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16sp"
+                            android:layout_marginTop="20dp"></androidx.recyclerview.widget.RecyclerView>
+
+                        <com.samyotech.petstand.utils.CustomTextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20sp"
+                            android:background="@drawable/gradiant_button5"
+                            android:drawableLeft="@drawable/ic_like_home"
+                            android:drawableRight="@drawable/ic_like_home"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5sp"
+                            android:text="Top Brands"
+                            android:textColor="@color/bpDark_gray"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_Top_brands_of_pet_food"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16sp"
+                            android:layout_marginTop="20dp"></androidx.recyclerview.widget.RecyclerView>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl"
+                    android:background="#fe8581"
+
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:id="@+id/tvmain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Help Desk"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+
+                    <com.samyotech.petstand.utils.CustomTextView
+                        android:id="@+id/ctvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvmain"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <com.samyotech.petstand.utils.CustomTextView
+                        android:id="@+id/ctvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ctvName"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                    <com.samyotech.petstand.utils.CustomTextView
+                        android:id="@+id/ctvNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ctvEmail"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5sp"
+
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.MainActivity">
+
+    <item
+        android:id="@+id/ic_edit_post"
+        android:orderInCategory="100"
+        android:title="Edit Post"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ic_delete_post"
+        android:icon="@drawable/gallery_card"
+        android:orderInCategory="100"
+        android:title="Delete"
+        app:showAsAction="never" />
+</menu>

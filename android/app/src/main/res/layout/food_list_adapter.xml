@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rlFoodList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <RelativeLayout
+                android:id="@+id/rlImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/ivFoodPic"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/dog_food" />
+
+                <com.samyotech.petstand.utils.SimpleTagImageView xmlns:simple="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/stiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/background"
+                    android:visibility="gone"
+                    simple:simple_corner_distance="30dp"
+                    simple:simple_tag_enable="false"
+                    simple:simple_tag_orientation="right_top"
+                    simple:simple_tag_round_radius="20dp"
+                    simple:simple_tag_textColor="@android:color/white"
+                    simple:simple_tag_textSize="10sp"
+                    simple:simple_tag_width="20dip" />
+
+
+                <LinearLayout
+                    android:id="@+id/llOff"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:background="@drawable/circleshap"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:id="@+id/ctvbDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Rs 1200 save"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlImage"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+                    android:id="@+id/ctvbFoodTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/foodTitle"
+                    android:textSize="12dp" />
+
+                <com.samyotech.petstand.utils.CustomTextView
+                    android:id="@+id/ctvFoodDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2sp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/foodDesc"
+                    android:textSize="12dp" />
+
+                <com.samyotech.petstand.utils.CustomTextView
+                    android:id="@+id/ctvWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/foodDesc"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <com.samyotech.petstand.utils.CustomTextView
+                    android:id="@+id/ctvColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="@string/foodDesc"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+
+                <com.samyotech.petstand.utils.CustomTextView
+                    android:id="@+id/ctvSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="@string/foodDesc"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+
+                <com.samyotech.petstand.utils.CustomTextView
+                    android:id="@+id/ctvFoodSKU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="@string/foodDesc"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/inset" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:id="@+id/ctvbPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/Rs"
+                        android:textColor="@color/inset"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:id="@+id/ctvbPrice1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/ctvbPrice"
+                        android:text=""
+                        android:textColor="@color/delete_reminder_p"
+                        android:textSize="14sp" />
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:id="@+id/ctvbCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ctvbPrice1"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/Rs"
+                        android:textColor="@color/inset"
+                        android:visibility="gone" />
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:id="@+id/ctvbOld"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ctvbPrice1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/ctvbCurrency"
+                        android:text=""
+                        android:textColor="@color/inset" />
+
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:text="35% Off"
+                        android:textColor="@color/green"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/material_grey_300"
+                    android:visibility="gone" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    app:mrb_progressTint="@color/orange"
+                    app:mrb_secondaryProgressTint="@color/inset" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

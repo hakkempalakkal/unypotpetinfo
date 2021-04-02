@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragment.NearBy.UserListFrag">
+
+    <LinearLayout
+        android:id="@+id/llFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@drawable/edittext_back"
+        android:orientation="horizontal">
+
+
+        <com.samyotech.petstand.utils.CustomEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:drawableRight="@drawable/ic_search_black"
+            android:gravity="center_vertical|left"
+            android:hint="Search by name.."
+            android:drawablePadding="10dp"
+            android:layout_margin="5dp"
+            android:singleLine="true">
+
+        </com.samyotech.petstand.utils.CustomEditText>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lvUserList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:layout_marginTop="10dp"
+        android:dividerHeight="0dp"
+        android:visibility="visible"></ListView>
+
+</LinearLayout>

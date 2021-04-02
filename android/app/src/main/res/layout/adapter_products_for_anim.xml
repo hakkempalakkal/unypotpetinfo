@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ll_product"
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rlFoodList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/rlImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/ivFoodPic"
+                        android:layout_width="90dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/dog_food" />
+
+                    <ImageView
+                        android:id="@+id/out_of_stock"
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:layout_centerInParent="true" />
+
+                    <LinearLayout
+                        android:id="@+id/llOff"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_marginLeft="7sp"
+                        android:background="@drawable/circleshap"
+                        android:gravity="center">
+
+                        <com.samyotech.petstand.utils.CustomTextViewBold
+                            android:id="@+id/ctvbDiscount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text=" 1%      off"
+                            android:textColor="@color/white"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlImage"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:id="@+id/ctvbFoodTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/foodTitle"
+                        android:textSize="12dp" />
+
+                    <com.samyotech.petstand.utils.CustomTextView
+                        android:id="@+id/ctvFoodDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/foodDesc"
+                        android:textSize="12dp" />
+
+                    <com.samyotech.petstand.utils.CustomTextView
+                        android:id="@+id/ctvWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/foodDesc"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <com.samyotech.petstand.utils.CustomTextView
+                        android:id="@+id/ctvColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/foodDesc"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+
+                    <com.samyotech.petstand.utils.CustomTextView
+                        android:id="@+id/ctvSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/foodDesc"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+
+                    <com.samyotech.petstand.utils.CustomTextView
+                        android:id="@+id/ctvFoodSKU"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/foodDesc"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/material_grey_300" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.samyotech.petstand.utils.CustomTextViewBold
+                            android:id="@+id/ctvbPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="@string/Rs"
+                            android:textColor="@color/inset"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <com.samyotech.petstand.utils.CustomTextViewBold
+                            android:id="@+id/ctvbPrice1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/ctvbPrice"
+                            android:text=""
+                            android:textColor="@color/price_color"
+                            android:textSize="14sp" />
+
+                        <com.samyotech.petstand.utils.CustomTextViewBold
+                            android:id="@+id/ctvbCurrency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ctvbPrice1"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/Rs"
+                            android:textColor="@color/inset"
+                            android:visibility="gone" />
+
+                        <com.samyotech.petstand.utils.CustomTextViewBold
+                            android:id="@+id/ctvbOld"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ctvbPrice1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/ctvbCurrency"
+                            android:text=""
+                            android:textColor="@color/inset" />
+
+
+                        <com.samyotech.petstand.utils.CustomTextViewBold
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text="35% Off"
+                            android:textColor="@color/green"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/material_grey_300"
+                        android:visibility="gone" />
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/Widget.MaterialRatingBar.RatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone"
+                        app:mrb_progressTint="@color/orange"
+                        app:mrb_secondaryProgressTint="@color/inset" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+    <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/placeCard"
+        android:layout_width="130sp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        card_view:cardCornerRadius="5sp"
+        card_view:cardElevation="5sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15sp"
+                android:src="@drawable/chicken1" />
+
+            <com.peteats.utils.CustomTextView
+                android:id="@+id/discount"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_for_animal"
+                android:gravity="center"
+                android:text="10% off"
+                android:textColor="@color/white"
+                android:textSize="8sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/placeNameHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100sp"
+            android:orientation="vertical">
+
+            <com.peteats.utils.CustomTextView
+                android:id="@+id/p_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:maxLines="1"
+                android:text="Pediree Adult chicken jelly"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+
+            <com.peteats.utils.CustomTextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="10sp"
+                android:maxLines="2"
+                android:text="Pediree Adult chicken jelly is the best product for this routin"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="8sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginTop="5sp"
+                android:background="#F3EDED"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:paddingBottom="3sp">
+
+                <TextView
+                    android:id="@+id/net_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3sp"
+                    android:layout_weight="1"
+                    android:text="$560"
+                    android:textColor="#F06899"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/gross_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3sp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="$840"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>-->
+</layout>

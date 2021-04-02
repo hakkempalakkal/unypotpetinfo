@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:id="@+id/rlFoodList"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp">
+
+            <RelativeLayout
+                android:id="@+id/RLpet"
+                android:layout_width="110dp"
+                android:layout_height="110dp">
+
+
+                <ImageView
+                    android:id="@+id/ivPetPic"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ears_icon" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#80000000">
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:id="@+id/CTVBImagecount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:drawableLeft="@drawable/ic_camera_white"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@color/white"
+
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@color/gray" />
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:id="@+id/CTVBcommnetcount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".4"
+                        android:drawableLeft="@drawable/ic_comment"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@color/white"
+
+                        />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/IVfav"
+                android:layout_toRightOf="@+id/RLpet"
+                android:orientation="vertical">
+
+                <com.samyotech.petstand.utils.CustomTextViewBold
+                    android:id="@+id/ctvbPetTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/foodTitle"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <com.samyotech.petstand.utils.CustomTextView
+                    android:id="@+id/ctvPetType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text=""
+                    android:textSize="14dp" />
+
+                <com.samyotech.petstand.utils.CustomTextView
+                    android:id="@+id/ctvPetOwner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text=""
+                    android:textSize="14dp" />
+
+                <com.samyotech.petstand.utils.CustomTextView
+                    android:id="@+id/ctvPetDisc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="suydaoifuoisdfoisdoifjoisdfoijsdafjsdfdsoifoisdfoidsoifusdioaufioasufoiusdaoi"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <com.samyotech.petstand.utils.CustomTextViewBold
+                android:id="@+id/ctvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/llBottom"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:padding="5dp"
+                android:text="USD 12"
+                android:textColor="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/IVfav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:src="@drawable/is_notfav" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_above="@+id/llBottom"
+                android:background="#81969696" />
+
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/LLcall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".30"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_call_gray"
+                        android:drawablePadding="5dp"
+                        android:textSize="14sp"
+                        android:text="Call"
+                        android:textColor="@color/colorPrimary" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/LLcomment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".30"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_comment_white"
+                        android:drawablePadding="5dp"
+                        android:text="Comment"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LLchat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".30"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.samyotech.petstand.utils.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_chat_white"
+                        android:drawablePadding="5dp"
+                        android:text="Chat"
+                        android:textColor="@color/colorPrimary" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LLimage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/IVowner"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/dummyuser"
+                        app:civ_border_color="@color/pink"
+                        app:civ_border_width="2dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

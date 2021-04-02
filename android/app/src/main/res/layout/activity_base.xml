@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BaseActivity">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp">
+
+        <com.nightonke.boommenu.BoomMenuButton
+            android:id="@+id/bmb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bmb_buttonEnum="simpleCircle"
+            app:bmb_buttonPlaceEnum="buttonPlace_sc_5_1"
+            app:bmb_hideDuration="700"
+            app:bmb_highlightedColor="@color/mstb_gray"
+            app:bmb_normalColor="@color/lightOrange"
+            app:bmb_piecePlaceEnum="piecePlace_dot_5_1"
+            app:bmb_shadowColor="@color/orange"
+            app:bmb_showDuration="700" />
+
+    </RelativeLayout>
+</RelativeLayout>

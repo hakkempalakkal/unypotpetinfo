@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bb_menu_favorites"
+        android:icon="@drawable/tab_home"
+        android:title="Favorites" />
+    <item
+        android:id="@+id/bb_menu_nearby"
+        android:icon="@drawable/tab_schedule"
+        android:title="Nearby" />
+    <item
+        android:id="@+id/bb_menu_friends"
+        android:icon="@drawable/tab_schedule"
+        android:title="Friends" />
+    <item
+        android:id="@+id/bb_menu_friend"
+        android:icon="@drawable/tab_daily_care"
+        android:title="Friends" />
+</menu>

@@ -1,0 +1,2090 @@
+{
+	"info": {
+		"_postman_id": "1a4d6ece-41ed-45c2-b0cf-d846219cfce7",
+		"name": "PetInfo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getNotifications",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getNotifications",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getNotifications"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgotPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/forgotPassword",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "118",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "477",
+							"type": "text"
+						},
+						{
+							"key": "payment_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "vijay nagar",
+							"type": "text"
+						},
+						{
+							"key": "landMark",
+							"value": "bapat square",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "nita",
+							"type": "text"
+						},
+						{
+							"key": "zip",
+							"value": "452010",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "india",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "+91",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "yadav123@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "indore",
+							"type": "text"
+						},
+						{
+							"key": "mobile_no",
+							"value": "6573437564",
+							"type": "text"
+						},
+						{
+							"key": "payment_status",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "shipping_cost",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/order",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_order_status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "118",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "477",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/get_order_status",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"get_order_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyOrderDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "118",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "477",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getMyOrderDetails",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getMyOrderDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "118",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getMyOrder",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getMyOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "postID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "116",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getPostById",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getPostById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTocart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "117",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "mandatory",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "shipping_cost",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/addTocart",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"addTocart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "116",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService//getMyCart",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"",
+						"getMyCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCartQuantity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "117",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/updateCartQuantity",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"updateCartQuantity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "homedata",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "117",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/homedata",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"homedata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "abuse_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "116",
+							"type": "text"
+						},
+						{
+							"key": "postID",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "reason",
+							"value": "not",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/abuse_post",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"abuse_post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllNearByVss",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nearby_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "116",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getAllNearByVss",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getAllNearByVss"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "postID",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "116",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/like",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dislike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "postID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "116",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/dislike",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"dislike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": " test",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/signUp",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "homedata",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "101",
+							"type": "text"
+						},
+						{
+							"key": "userStatus",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/homedata",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"homedata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "101",
+							"type": "text"
+						},
+						{
+							"key": "pet_type",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getAllCat",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getAllCat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addressFill1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/addressFill1",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"addressFill1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "shivangiaday29@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "device_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "os_type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "device_tokan",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/login",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgotPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "gthbgdf@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/forgotPassword",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProfileUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "mobile_no",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "postcode",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "lati",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "longi",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "profile_pic",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/updateProfileUser",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"updateProfileUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "petName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "breed_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "current_weight",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "current_height",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "microchip_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "active_area",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "lifestyle",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "neutered",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "trained",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "adoption_date",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "allergies",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "medical_conditions",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "medicines",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "likes",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "dislikes",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "incidents",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getMemoriesByPet",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getMemoriesByPet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMyPet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "userStatus",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getMyPet",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getMyPet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSinglePet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getSinglePet",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getSinglePet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPetByUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "follower_user_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getPetByUser",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getPetByUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePublicPrivate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/updatePublicPrivate",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"updatePublicPrivate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAdopt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "adopt",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/updateAdopt",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"updateAdopt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSaleNotSale",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "sel_notsel",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/updateSaleNotSale",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"updateSaleNotSale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getNearByUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "lati",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "longi",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getNearByUser",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getNearByUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBreedByType",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_type",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getAllBreedByType",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getAllBreedByType"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "petName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "current_weight",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "current_height",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "microchip_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "active_area",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "lifestyle",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "neutered",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "trained",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "adoption_date",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "allergies",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "medical_conditions",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "medicines",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "likes",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "dislikes",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "incidents",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_img_path",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/update_pet",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"update_pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_reminder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "app_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "timezone",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "advance",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "repeat",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "remark",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "offset",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/create_reminder",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"create_reminder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change_status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "app_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/change_status",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"change_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_reminders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "app_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/get_reminders",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"get_reminders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reminder_history",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "app_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/reminder_history",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"reminder_history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/checkProduct",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"checkProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addMemories",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pet_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "pet_img_path",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "created",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/addMemories",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"addMemories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addContact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pet_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "user_id_owner",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "created",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/addContact",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"addContact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getAllRequest",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getAllRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMemories",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getMemories",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getMemories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllProductByCatName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "cat_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getAllProductByCatName",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getAllProductByCatName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "p_pet_type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "p_type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "brand_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getAllProduct",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getAllProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSingleProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "p_pet_type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "p_type",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "brand_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "p_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "p_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://phpstack-132936-1057235.cloudwaysapps.com/Admin/WebService/getSingleProducts",
+					"protocol": "http",
+					"host": [
+						"phpstack-132936-1057235",
+						"cloudwaysapps",
+						"com"
+					],
+					"path": [
+						"Admin",
+						"WebService",
+						"getSingleProducts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
